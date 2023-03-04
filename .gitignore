@@ -1,1 +1,5 @@
 /config.json
+/quotes.json
+node_modules
+*.iml
+.idea
