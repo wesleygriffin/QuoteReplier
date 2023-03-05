@@ -4,7 +4,9 @@
   "description": "A bot that will reply to mentions with random quotes.",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^14.7.1"
+    "discord.js": "^14.7.1",
+    "sequelize": "^6.29.0",
+    "sqlite3": "^5.1.4"
   },
   "devDependencies": {
     "eslint": "^8.35.0",
@@ -15,6 +17,7 @@
   },
   "scripts": {
     "start": "node .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "deploy-commands": "node ./deploy-commands.js"
   }
 }

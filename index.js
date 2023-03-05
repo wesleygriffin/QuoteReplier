@@ -9,6 +9,7 @@ client.commands = new Collection()
 loadFiles(path.join(__dirname, 'commands'), file => file.endsWith('.js'), (filePath, command) => {
     if ('data' in command && 'execute' in command) {
         client.commands.set(command.data.name, command)
+        console.log(`Added command ${command.data.name} from ${filePath}`)
     } else {
         console.log(`[WARNING] The command at ${filePath} is missing a required "data" or "execute" property`)
     }

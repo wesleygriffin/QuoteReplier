@@ -1,5 +1,6 @@
 /config.json
 /quotes.json
+/quotes.sqlite
 node_modules
 *.iml
 .idea
