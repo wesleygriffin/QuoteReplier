@@ -2,7 +2,7 @@ const { Events } = require('discord.js')
 const { clientId, triggerPhrase } = require('../config.json')
 const { Quotes } = require('../quotes.js')
 
-function between(min, max) {
+function between (min, max) {
     return Math.floor(
         Math.random() * (max - min) + min
     )
@@ -17,7 +17,7 @@ module.exports = {
             const user = message.author
 
             try {
-                let quotes = await Quotes.findAll({ attributes: ['quote']})
+                let quotes = await Quotes.findAll({ attributes: ['quote'] })
                 quotes = quotes.map(q => q.quote)
                 let response = quotes[between(0, quotes.length)]
                 response = response.replace('USR_RPL', `<@${user.id}>`)
